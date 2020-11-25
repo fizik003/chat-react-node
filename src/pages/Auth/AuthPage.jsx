@@ -1,5 +1,7 @@
 import React from "react";
-import { Block, Button } from "components";
+import { Route } from "react-router-dom";
+
+import { LoginForm, RegisterForm } from "modules";
 
 import "./AuthPage.scss";
 
@@ -7,15 +9,8 @@ const AuthPage = () => {
   return (
     <section className="auth">
       <div className="auth__content">
-        <div className="auth__top">
-          <h2>Войти в аккаунт</h2>
-          <p> Пожалуйста, войдите в свой аккаунт </p>
-        </div>
-        <Block>
-          <Button size="large" type="primary">
-            fdfdf
-          </Button>
-        </Block>
+        <Route path={["/", "/login"]} component={LoginForm} exact />
+        <Route path="/register" component={RegisterForm} />
       </div>
     </section>
   );
