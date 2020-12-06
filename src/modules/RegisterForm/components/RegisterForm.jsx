@@ -10,7 +10,7 @@ import {
 import { Button, Block } from "components";
 
 const RegisterForm = () => {
-  const success = true;
+  const success = false;
   return (
     <>
       <div className="auth__top">
